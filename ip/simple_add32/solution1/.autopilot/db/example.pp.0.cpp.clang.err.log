@@ -1,0 +1,19 @@
+/home/tony/fpga/hls/simple_add32/solution1/csynth.tcl:14:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=example_XLX_SEP_ PragmaOptions=name=example_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=example
+        ^
+simple_add32/example.cpp:24:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_XLX_SEP_ PragmaOptions=s_axilite port=a bundle=BUS_A offset=0x20_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=a bundle=BUS_A offset=0x20
+        ^
+simple_add32/example.cpp:25:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_XLX_SEP_ PragmaOptions=s_axilite port=b bundle=BUS_A offset=0x28_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=b bundle=BUS_A offset=0x28
+        ^
+simple_add32/example.cpp:26:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_XLX_SEP_ PragmaOptions=s_axilite port=c bundle=BUS_A offset=0x30_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=c bundle=BUS_A offset=0x30
+        ^
+simple_add32/example.cpp:27:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_XLX_SEP_ PragmaOptions=s_axilite port=ver bundle=BUS_A offset=0x40_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=ver bundle=BUS_A offset=0x40
+        ^
+simple_add32/example.cpp:28:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=example_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=BUS_A_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return bundle=BUS_A
+        ^
+6 warnings generated.

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op all" ID="" IMPL="tadder" LATENCY="0" OPTYPE="all" PRAGMA="" RTLNAME="add_ln30_fu_75_p2" SOURCE="simple_add32/example.cpp:30" VARIABLE="add_ln30" MODULE="example" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op all" ID="" IMPL="tadder" LATENCY="0" OPTYPE="all" PRAGMA="" RTLNAME="c_o" SOURCE="simple_add32/example.cpp:30" VARIABLE="add_ln30_1" MODULE="example" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axilite" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="BUS_A_s_axi_U" SOURCE="" VARIABLE="" MODULE="example" LOOP="" BUNDLEDNAME="BUS_A" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>

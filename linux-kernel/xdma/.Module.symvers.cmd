@@ -1,0 +1,1 @@
+cmd_/home/tony/fpga/PCIe_related/official/dma_ip_drivers/XDMA/linux-kernel/xdma/Module.symvers := sed 's/\.ko$$/\.o/' /home/tony/fpga/PCIe_related/official/dma_ip_drivers/XDMA/linux-kernel/xdma/modules.order | scripts/mod/modpost -m -a  -o /home/tony/fpga/PCIe_related/official/dma_ip_drivers/XDMA/linux-kernel/xdma/Module.symvers -e -i Module.symvers   -T -

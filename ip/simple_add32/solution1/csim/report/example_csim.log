@@ -1,0 +1,14 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../example_test.cpp in debug mode
+   Compiling ../../../example.cpp in debug mode
+   Generating csim.exe
+HLS AXI-Lite Example
+Function c += a + b
+Initial values a = 5, b = 10, c = 0
+HW result = 15
+SW result = 15
+version =ffffff96
+Success SW and HW results match
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

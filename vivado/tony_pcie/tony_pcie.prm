@@ -1,0 +1,11 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX4
+Size               32M
+Start Address      0x00000000
+End Address        0x01FFFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x0036CB37    Mar  4 21:15:22 2023    /home/tony/fpga/DEMO/tony_pcie/tony_pcie.runs/impl_1/design_1_wrapper.bit

@@ -1,0 +1,21 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/tony/fpga/hls/simple_add32/solution1/csynth.tcl:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="example" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=example" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="simple_add32/example.cpp:24:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="example" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=a bundle=BUS_A offset=0x20" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="simple_add32/example.cpp:25:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="example" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=b bundle=BUS_A offset=0x28" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="simple_add32/example.cpp:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="example" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=c bundle=BUS_A offset=0x30" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="simple_add32/example.cpp:27:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="example" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=ver bundle=BUS_A offset=0x40" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="simple_add32/example.cpp:28:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="example" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=BUS_A" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

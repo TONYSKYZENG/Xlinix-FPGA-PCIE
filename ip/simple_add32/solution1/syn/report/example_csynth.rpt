@@ -1,0 +1,131 @@
+
+
+================================================================
+== Vitis HLS Report for 'example'
+================================================================
+* Date:           Sat Mar  4 16:11:55 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        simple_add32
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: kintex7
+* Target device:  xc7k325t-fbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.941 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|      16|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        0|    -|     106|     120|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       -|       -|    -|
+|Register         |        -|    -|       -|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|    0|     106|     136|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |      890|  840|  407600|  203800|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------+-------------+---------+----+-----+-----+-----+
+    |    Instance   |    Module   | BRAM_18K| DSP|  FF | LUT | URAM|
+    +---------------+-------------+---------+----+-----+-----+-----+
+    |BUS_A_s_axi_U  |BUS_A_s_axi  |        0|   0|  106|  120|    0|
+    +---------------+-------------+---------+----+-----+-----+-----+
+    |Total          |             |        0|   0|  106|  120|    0|
+    +---------------+-------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------+----------+----+---+----+------------+------------+
+    |   Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------+----------+----+---+----+------------+------------+
+    |add_ln30_fu_75_p2  |         +|   0|  0|   8|           8|           8|
+    |c_o                |         +|   0|  0|   8|           8|           8|
+    +-------------------+----------+----+---+----+------------+------------+
+    |Total              |          |   0|  0|  16|          16|          16|
+    +-------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+--------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------------+-----+-----+------------+--------------+--------------+
+|s_axi_BUS_A_AWVALID  |   in|    1|       s_axi|         BUS_A|       pointer|
+|s_axi_BUS_A_AWREADY  |  out|    1|       s_axi|         BUS_A|       pointer|
+|s_axi_BUS_A_AWADDR   |   in|    7|       s_axi|         BUS_A|       pointer|
+|s_axi_BUS_A_WVALID   |   in|    1|       s_axi|         BUS_A|       pointer|
+|s_axi_BUS_A_WREADY   |  out|    1|       s_axi|         BUS_A|       pointer|
+|s_axi_BUS_A_WDATA    |   in|   32|       s_axi|         BUS_A|       pointer|
+|s_axi_BUS_A_WSTRB    |   in|    4|       s_axi|         BUS_A|       pointer|
+|s_axi_BUS_A_ARVALID  |   in|    1|       s_axi|         BUS_A|       pointer|
+|s_axi_BUS_A_ARREADY  |  out|    1|       s_axi|         BUS_A|       pointer|
+|s_axi_BUS_A_ARADDR   |   in|    7|       s_axi|         BUS_A|       pointer|
+|s_axi_BUS_A_RVALID   |  out|    1|       s_axi|         BUS_A|       pointer|
+|s_axi_BUS_A_RREADY   |   in|    1|       s_axi|         BUS_A|       pointer|
+|s_axi_BUS_A_RDATA    |  out|   32|       s_axi|         BUS_A|       pointer|
+|s_axi_BUS_A_RRESP    |  out|    2|       s_axi|         BUS_A|       pointer|
+|s_axi_BUS_A_BVALID   |  out|    1|       s_axi|         BUS_A|       pointer|
+|s_axi_BUS_A_BREADY   |   in|    1|       s_axi|         BUS_A|       pointer|
+|s_axi_BUS_A_BRESP    |  out|    2|       s_axi|         BUS_A|       pointer|
+|ap_clk               |   in|    1|  ap_ctrl_hs|       example|  return value|
+|ap_rst_n             |   in|    1|  ap_ctrl_hs|       example|  return value|
+|interrupt            |  out|    1|  ap_ctrl_hs|       example|  return value|
++---------------------+-----+-----+------------+--------------+--------------+
+

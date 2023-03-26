@@ -1,0 +1,1 @@
+cmd_/home/tony/fpga/PCIe_related/official/dma_ip_drivers/XDMA/linux-kernel/xdma/modules.order := {   echo /home/tony/fpga/PCIe_related/official/dma_ip_drivers/XDMA/linux-kernel/xdma/xdma.ko; :; } | awk '!x[$$0]++' - > /home/tony/fpga/PCIe_related/official/dma_ip_drivers/XDMA/linux-kernel/xdma/modules.order

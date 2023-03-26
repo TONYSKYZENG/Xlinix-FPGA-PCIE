@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1677917515788">
+  <ports id="1" name="a" type="PortType" originalName="a" coreId="0" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="b" type="PortType" originalName="b" coreId="0" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="c" type="PortType" originalName="c" coreId="2962357824" bitwidth="8" direction="DirInOut">
+    <dataInputObjs>read</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>write</dataOutputObjs>
+  </ports>
+  <ports id="4" name="ver" type="PortType" originalName="ver" coreId="1330007625" bitwidth="8" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="30" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@ports.3"/>
+  <edges id="35" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="37" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="39" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="40" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="41" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="42" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="43" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="45" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="46" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="242" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="-39" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@ports.2"/>
+  <edges id="-45" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@ports.2"/>
+  <blocks id="27" name="example" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="ver_write_ln29" lineNumber="29" fileName="simple_add32/example.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="example" opcode="write" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simple_add32/example.cpp" linenumber="29" fileDirectory="/home/tony/fpga/hls" functionName="example"/>
+      <dataOutputObjs>ver</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="a_read" lineNumber="30" fileName="simple_add32/example.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="example" bitwidth="8" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simple_add32/example.cpp" linenumber="30" fileDirectory="/home/tony/fpga/hls" functionName="example"/>
+      <dataInputObjs>a</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="b_read" lineNumber="30" fileName="simple_add32/example.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="example" bitwidth="8" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simple_add32/example.cpp" linenumber="30" fileDirectory="/home/tony/fpga/hls" functionName="example"/>
+      <dataInputObjs>b</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="c_read" lineNumber="30" fileName="simple_add32/example.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="example" bitwidth="8" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simple_add32/example.cpp" linenumber="30" fileDirectory="/home/tony/fpga/hls" functionName="example"/>
+      <dataInputObjs>c</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>c</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="add_ln30" lineNumber="30" fileName="simple_add32/example.cpp" fileDirectory=".." rtlName="add_ln30_fu_75_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="all" coreId="10" contextFuncName="example" bitwidth="8" opcode="add" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simple_add32/example.cpp" linenumber="30" fileDirectory="/home/tony/fpga/hls" functionName="example"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="add_ln30_1" lineNumber="30" fileName="simple_add32/example.cpp" fileDirectory=".." rtlName="c_o" coreName="TAddSub" implIndex="tadder" control="no" opType="all" coreId="10" contextFuncName="example" bitwidth="8" opcode="add" m_display="0" m_delay="1.94" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simple_add32/example.cpp" linenumber="30" fileDirectory="/home/tony/fpga/hls" functionName="example"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="c_write_ln30" lineNumber="30" fileName="simple_add32/example.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="example" opcode="write" m_display="0" m_delay="1.0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simple_add32/example.cpp" linenumber="30" fileDirectory="/home/tony/fpga/hls" functionName="example"/>
+      <dataInputObjs>c</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>c</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="_ln31" lineNumber="31" fileName="simple_add32/example.cpp" fileDirectory=".." coreId="3117282256" contextFuncName="example" opcode="ret" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simple_add32/example.cpp" linenumber="31" fileDirectory="/home/tony/fpga/hls" functionName="example"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="simple_add32/example.cpp">
+      <validLinenumbers>29</validLinenumbers>
+      <validLinenumbers>30</validLinenumbers>
+      <validLinenumbers>31</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <expressionNodes realName="add_ln30_1_fu_81">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln30_fu_75">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="c_read_read_fu_62">
+    <nodeIds>22</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln30_write_fu_68">
+    <nodeIds>25</nodeIds>
+  </ioNodes>
+  <ioNodes realName="b_read_read_fu_56">
+    <nodeIds>21</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln29_write_fu_42">
+    <nodeIds>19</nodeIds>
+  </ioNodes>
+  <ioNodes realName="a_read_read_fu_50">
+    <nodeIds>20</nodeIds>
+  </ioNodes>
+  <ioPorts name="a">
+    <contents name="read">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b">
+    <contents name="read">
+      <nodeIds>21</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="c">
+    <contents name="read">
+      <nodeIds>22</nodeIds>
+    </contents>
+    <contents name="write">
+      <nodeIds>25</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ver">
+    <contents name="write">
+      <nodeIds>19</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="example" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>27</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

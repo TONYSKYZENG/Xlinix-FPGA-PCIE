@@ -1,0 +1,115 @@
+
+
+================================================================
+== Synthesis Summary Report of 'example'
+================================================================
++ General Information: 
+    * Date:           Sat Mar  4 16:11:55 2023
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        simple_add32
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: kintex7
+    * Target device:  xc7k325t-fbg676-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |  Modules  | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |           |           |     |
+    |  & Loops  | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +-----------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ example  |     -|  3.36|        0|   0.000|         -|        1|     -|        no|     -|   -|  106 (~0%)|  136 (~0%)|    -|
+    +-----------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++-------------+------------+---------------+--------+----------+
+| Interface   | Data Width | Address Width | Offset | Register |
++-------------+------------+---------------+--------+----------+
+| s_axi_BUS_A | 32         | 7             | 32     | 0        |
++-------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++-------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface   | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++-------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_BUS_A | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_BUS_A | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_BUS_A | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_BUS_A | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_BUS_A | a        | 0x20   | 32    | W      | Data signal of a                 |                                                                      |
+| s_axi_BUS_A | b        | 0x28   | 32    | W      | Data signal of b                 |                                                                      |
+| s_axi_BUS_A | c_i      | 0x30   | 32    | W      | Data signal of c_i               |                                                                      |
+| s_axi_BUS_A | c_o      | 0x38   | 32    | R      | Data signal of c_o               |                                                                      |
+| s_axi_BUS_A | c_o_ctrl | 0x3c   | 32    | R      | Control signal of c_o            | 0=c_o_ap_vld                                                         |
+| s_axi_BUS_A | ver      | 0x40   | 32    | R      | Data signal of ver               |                                                                      |
+| s_axi_BUS_A | ver_ctrl | 0x44   | 32    | R      | Control signal of ver            | 0=ver_ap_vld                                                         |
++-------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| a        | in        | char*    |
+| b        | in        | char*    |
+| c        | inout     | char*    |
+| ver      | out       | char*    |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+----------+------------------------------------+
+| Argument | HW Interface | HW Type  | HW Info                            |
++----------+--------------+----------+------------------------------------+
+| a        | s_axi_BUS_A  | register | name=a offset=0x20 range=32        |
+| b        | s_axi_BUS_A  | register | name=b offset=0x28 range=32        |
+| c        | s_axi_BUS_A  | register | name=c_i offset=0x30 range=32      |
+| c        | s_axi_BUS_A  | register | name=c_o offset=0x38 range=32      |
+| c        | s_axi_BUS_A  | register | name=c_o_ctrl offset=0x3c range=32 |
+| ver      | s_axi_BUS_A  | register | name=ver offset=0x40 range=32      |
+| ver      | s_axi_BUS_A  | register | name=ver_ctrl offset=0x44 range=32 |
++----------+--------------+----------+------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
+  No bind op info in design
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+---------------------------------------------+------------------------------------------------+
+| Type      | Options                                     | Location                                       |
++-----------+---------------------------------------------+------------------------------------------------+
+| interface | s_axilite port=a bundle=BUS_A offset=0x20   | simple_add32/example.cpp:24 in example, a      |
+| interface | s_axilite port=b bundle=BUS_A offset=0x28   | simple_add32/example.cpp:25 in example, b      |
+| interface | s_axilite port=c bundle=BUS_A offset=0x30   | simple_add32/example.cpp:26 in example, c      |
+| interface | s_axilite port=ver bundle=BUS_A offset=0x40 | simple_add32/example.cpp:27 in example, ver    |
+| interface | s_axilite port=return bundle=BUS_A          | simple_add32/example.cpp:28 in example, return |
++-----------+---------------------------------------------+------------------------------------------------+
+
+

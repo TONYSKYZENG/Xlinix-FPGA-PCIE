@@ -1,0 +1,7 @@
+<pragmas>
+<pragma file="simple_add32/example.cpp" line="24" pragmaType="interface" parentfunction="example" mode="s_axilite" port="a" bundle="BUS_A" offset="32" name="" clock="" impl="" register="0"/>
+<pragma file="simple_add32/example.cpp" line="25" pragmaType="interface" parentfunction="example" mode="s_axilite" port="b" bundle="BUS_A" offset="40" name="" clock="" impl="" register="0"/>
+<pragma file="simple_add32/example.cpp" line="26" pragmaType="interface" parentfunction="example" mode="s_axilite" port="c" bundle="BUS_A" offset="48" name="" clock="" impl="" register="0"/>
+<pragma file="simple_add32/example.cpp" line="27" pragmaType="interface" parentfunction="example" mode="s_axilite" port="ver" bundle="BUS_A" offset="64" name="" clock="" impl="" register="0"/>
+<pragma file="simple_add32/example.cpp" line="28" pragmaType="interface" parentfunction="example" mode="s_axilite" port="" bundle="BUS_A" offset="-1" name="" clock="" impl="" register="0"/>
+</pragmas>
